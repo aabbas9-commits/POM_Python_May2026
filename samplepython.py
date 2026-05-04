@@ -1,0 +1,22 @@
+
+
+print("Hello world")
+# print("Hello world")
+print("Hello world")
+print("Hello world")
+
+print("hello world")
+
+from playwright.sync_api import sync_playwright
+
+ 
+
+with sync_playwright() as p:
+
+    browser = p.chromium.launch(headless=False)
+
+    page = browser.new_page()
+
+    page.goto("https://www.amazon.in/")
+
+    page.wait_for_timeout(5000)
